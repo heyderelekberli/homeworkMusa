@@ -8,8 +8,7 @@ header{
     margin:auto;
     padding:auto;
     border:1px solid red;
-    width:70%;
-    
+    width:70%;      
 }
 .headPart{
     display:flex;
@@ -72,45 +71,59 @@ flex-direction:column;
 .buttonPart em{
     color: #666;
 }
-.buttonPart a{
-    width:120px;
-    height:40px;
-    background-color: #00c9b1;
-    text-align: center;
-    line-height: 40px;
-    border:1px solid transparent;
-    border-radius:2px;
-    margin-right:20px;
-    margin-top:15px;
-    position: relative;
-}
-.buttonPart a:link{
-    text-decoration:none;
-    color: #fff;
-}
-.buttonPart a:visited{
-    color: #fff;
-}
 .button{
-    display:flex;
-    flex-direction:row;
+    margin-top:20px;
 }
-.button a:nth-child(1)::before{
-content:"";
-width:120px;
-height:40px;
-left:0;
-background-color:white;
-transition: 0.5s;
+.aButton {
+    position: relative;
+    border:1px solid #00c9b1; 
+    padding:15px 40px;
+    margin:0px 15px 10px 0; 
+    text-decoration: none;
+    display:inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #00c9b1;
+    border-radius: 2px;
+    color: #fff;
+    z-index: 1;
+}
+.aButRight::before{
+top:0;
+left: 0;
 position: absolute;
-}
-.button a:nth-child(1):hover::before{
-    content:"";
-    width:120px;
-    height:40px;
-    left:0;
-    background-color:white;
-    transition: 0.5s;
-    position: absolute;
+content:"";
+width:0%;
+height: 100%;
+background-color: #fff;
+z-index: -1;
+opacity:0;
+transition:0.5s;
+
 }
 
+.aButRight:hover::before{
+    width: 100%;
+    opacity:1;
+}
+.aButFooter::before{
+    top:0;
+    left: 0;
+    position: absolute;
+    content:"";
+    width:100%;
+    height: 0%;
+    background-color: #fff;
+    z-index: -1;
+    opacity:0;
+    transition:0.5s;
+    
+    }
+.aButton:hover{
+    color: #00c9b1;
+
+}
+.aButFooter:hover::before{
+    height: 100%;
+    opacity:1;
+}
