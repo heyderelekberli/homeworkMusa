@@ -1,16 +1,19 @@
-header{
+body{
+    margin:0px;
+    padding:0px;
+}
+ header{
     width:100%;
-    border:1px solid black;
     display:flex;
     flex-direction:column;
     background-image: url(background.jpg);
     background-size: cover;
 }
+
 .container{
     margin:auto;
     padding:auto;
-    border:1px solid red;
-    width:70%;      
+    width:74%;      
 }
 .headPart{
     display:flex;
@@ -21,7 +24,7 @@ header{
 text-decoration: none;
 word-spacing: -5px;
 color: rgba(0,0,0,.9);
-font-size:25px;
+font-size:33px;
 }
 .headPart a:visited{
 color: rgba(0,0,0,.9);
@@ -37,11 +40,12 @@ flex-direction:row;
     margin-left:25px;
     list-style-type:none;
     line-height: 70px;
+    margin-top:10px;
 }
 .navBar ul li a:link{
     text-decoration: none;
     color: rgba(0,0,0,.9);
-    font-size:20px;
+    font-size:19px;
 }
 .navBar ul li a:hover{
     color: #00c9b1;
@@ -62,7 +66,7 @@ flex-direction:column;
 }
 .buttonPart h1{
     color: #232323;
-    font-size: 33px;
+    font-size: 39px;
     letter-spacing: 2px;
     margin-top:-8px;
     margin-bottom:5px;
@@ -128,4 +132,41 @@ transition:0.5s;
 .aButFooter:hover::before{
     height: 100%;
     opacity:1;
+}
+.animPart{
+    height:250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animBox{
+    width:30px;
+    height:60px;
+    border:2px solid #00c9b1;
+    border-radius:20px;
+    margin-top:100px;
+    position: relative;
+}
+.ball{
+    border:1px solid #00c9b1;
+    border-radius:50%;
+    width:7px;
+    height:7px;
+    position: absolute;
+    background-color: #00c9b1;
+    animation: ball 2.6s ease 0s infinite alternate both;
+}
+@keyframes ball{
+    0%{
+        top:44px;
+        left:11px;
+    }
+    50%{
+        top:8px;
+        left:11px;
+    }
+    100%{
+        top:44px;
+        left:11px;
+    }
 }
