@@ -341,8 +341,6 @@ transition-delay:0.5s;
 }
 .content3{
     background-color:#fff;
-    height:800px;
-    border:1px solid red;
     width:100%;
     display:flex;
     flex-direction: column;
@@ -353,7 +351,6 @@ transition-delay:0.5s;
     margin:auto;
     padding:auto;
     height:100%;
-    border:1px solid navy;
     display:flex;
     flex-direction:column;
     margin-top:50px;
@@ -363,49 +360,137 @@ transition-delay:0.5s;
     flex-direction:row;
     width:100%;
     height:90%;
-
     justify-content:space-around;
-    margin-bottom:20px;
+    margin-bottom:30px;
+}
+.modelDiv:hover{
+    transform:translate(0px,-13px);
+    transition-duration: 2s;
+    opacity:1;
+}
+.modelDiv:hover i{
+    transform:translate(0px,-13px);
+    transition-duration: 1.5s;
 }
 .modelDiv{
 width:30%;
 height:220px;
 border:1px solid rgba(228, 224, 224, 0.4);
-box-shadow:1px 1px 1px 1px rgba(228, 224, 224, 0.4);
+box-shadow:1px 1px 1px 1px rgba(228, 224, 224, 0.6);
 display:flex;
 flex-direction: column;
 text-align:center;
 padding-top:50px;
-}
-/* .modelDiv:hover{ 
-  animation: model 1s linear 0s infinite alternate backwards;
-  background-color: red;
-}
-@keyframes model{
-    0%{
-        top:100px;
-        left:20px;
-    }
-    100%{
-        top:90px;
-        left:20px
-    }
-}*/
-.codeIcon{
-    width:35px;
-    height:35px;
-    border:2px solid #00c9b1;
-    border-radius:2px;
-    padding:5px 5px;
-    line-height:35px;
-    color:#00c9b1;
-    transform: translate(160px, 0px)
+opacity:0.5;
 }
 .modelDiv>h3{
 margin:20px 0px 15px 0px;
+font-size:20px;
 }
 .modelDiv>i{
     color:#00c9b1;
     font-size:35px;
     margin-top:20px;
+}
+.content4{
+    width:100%;
+    height:1800px;
+    border:1px solid red;
+    display:flex;
+    flex-direction:column;
+    background-color: rgba(228, 224, 224, 0.6);
+    text-align: center;
+}
+.content4>div:nth-child(1){
+    width:100%;
+    padding-bottom:40px;
+}
+.lineSolid{
+    width:120px;
+    height:2px;
+    background-color: #00c9b1;
+    margin:50px 0px 0px 610px;
+    position: relative;
+}
+.square{
+    width:15px;
+    height:15px;
+    background-color: #00c9b1;
+    transform:translate(50px, -7px) rotate(45deg);
+    position: absolute;
+}
+.content4>div:nth-child(2){
+    width:100%;
+    height:300px;
+    border:1px solid navy;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.halfButton{
+width:80px;
+height:30px;
+background-color: #ddd;
+margin-right:13px;
+text-decoration: none;
+color:#232323;
+line-height:30px;
+padding: 0px 5px;
+position: relative;
+border:1px solid #ddd;
+border-radius:2px;
+display:inline-block;
+z-index:1;
+}
+.halfBut::before{
+    top:0;
+    left: 0;
+    position: absolute;
+    content:"";
+    width:50%;
+    height: 0%;
+    background-color:#00c9b1;
+    opacity:0;
+    transition:0.5s;
+    z-index:-1;
+}
+.halfBut:hover::before{
+    height:100%;
+    opacity:1;
+}
+.halfBut::after{
+    bottom:0;
+    right: 0;
+    position: absolute;
+    content:"";
+    width:50%;
+    height: 0%;
+    background-color:#00c9b1;
+    z-index:-1;
+    opacity:0;
+    transition:0.5s;
+}
+.halfBut:hover::after{
+height:100%;
+opacity:1;
+}
+.halfButton:hover{
+    color:#fff;
+    z-index:2;
+}
+
+.content4>div:nth-child(3){
+    width:100%;
+    height:300px;
+    border:1px solid navy;
+}
+.content4>div:nth-child(4){
+    width:100%;
+    height:300px;
+    border:1px solid navy;
+}
+.content4>div:nth-child(5){
+    width:100%;
+    height:300px;
+    border:1px solid navy;
 }
