@@ -402,7 +402,7 @@ font-size:20px;
     text-align: center;
 }
 .content4>div{
-    margin-bottom:15px;
+    margin-bottom:30px;
 }
 .content4>div:nth-child(1){
     width:100%;
@@ -504,29 +504,70 @@ opacity:1;
     border:1px solid black;
     position: relative;
     overflow: hidden;
+    text-align: center;
+ 
 }
+
 .hidden{
     position: absolute;
-    width:85%;
-    height:87%;
-    background-color:#00c9abb2;
-    display:none;  
+    opacity: 0;
+    width:87%;
+    height:85%;
+    padding-left:30px;
+  
+}
+.hidden>h1, .hidden>p{
     color:#fff;
-    margin: 10px 30px;
+    margin:0px;
+  
+}
+.hidden i{
+color:#00c9b1;
+font-size:25px;
+
+}
+.hidden>div{
+    width:50px;
+    height:50px;
+    background-color: white;
+    border:1px solid transparent;
+    border-radius: 50%;
+    margin:20% 0 0  40%;
+    line-height:55px;
+}
+
+.img::before{
+    content:"";
+    position: absolute;
+    width:87%;
+    height:85%;
+    background-color: #00c9b162;
+    opacity: 0;
+    margin:20px 0 20px 25px;
+    z-index:1;
+    cursor:pointer;
+}
+.img:hover::before{
+    content:"";
+    opacity:1;
+    z-index:0;
+    position: absolute;
+}
+.img:hover .img::before{
+    z-index:0;
+    opacity:1;
+    content:"";
+}
+.img:hover .hidden{
+    opacity:1;
    
 }
- .img:hover .hidden{
-    display:block;
-    z-index:1
-}
-.hidden:hover img{
-    transform: scale(1.1)  
-}
+
+
 .img>img:hover {
-    transform: scale(1.1)  
+    transform: scale(1.1);
+    transition:0.5s; 
 }
-
-
 .img>img{
     width:100%;
     height:100%;
